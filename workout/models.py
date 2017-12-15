@@ -8,7 +8,7 @@ INTENSITY_RATING = [(i,i) for i in range(1,11)]
 TIME_OF_DAY = [('early', 'early'), ('midday', 'midday'), ('afternoon', 'afternoon'), ('evening', 'evening'), ('night', 'night')]
 
 class Workout(models.Model):
-    day = models.DateField()
+    date = models.DateField()
     time_of_day = models.CharField(max_length=12,choices=TIME_OF_DAY)
     title = models.CharField(max_length=40)
     notes = models.TextField(null=True,blank=True)
